@@ -24,7 +24,7 @@
         android:layout_marginTop="100dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:hint="E-mail"
+        android:hint="E-mail/Номер телефона"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

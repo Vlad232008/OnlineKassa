@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun inputEmployer(){
-        if (phone.textSize.toInt() != 11) {
+        if (phone.length() != 11) {
             Fexcstr.text = "Телефон не верен, должно быть 11 символов"
             return
         }
         saveJson()
         val input = Intent(this, ActivityRealization::class.java)
-        input.putExtra("phone", phone.text)
+        input.putExtra("phone", phone.text.toString())
         startActivity(input)
     }
     private fun saveJson(){
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             str = br.readLine()
             // читаем содержимое
             if (str != null) {
-
+                Log.d("MyLog", "Файл пуст")
             } else {
                 val input = Intent(this, ActivityRealization::class.java)
                 input.putExtra("phone", str.toString())
